@@ -1,0 +1,167 @@
+.landing-wrapper {
+  background-color: #000;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.landing-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  background-image: url('https://images.unsplash.com/photo-1585647347384-2593bc35786b?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.background-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+}
+
+.landing-header, .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 5%;
+}
+
+.netflix-logo { color: #e50914; font-size: 2.5rem; font-weight: 900; margin: 0; }
+.header-actions { display: flex; gap: 12px; }
+.lang-select { background: rgba(0,0,0,0.4); color: white; border: 1px solid #aaa; border-radius: 4px; padding: 4px 20px; }
+.sign-in-btn { background-color: #e50914; color: white; border: none; border-radius: 4px; padding: 8px 16px; font-weight: bold; cursor: pointer; }
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.hero-title { font-size: 3rem; font-weight: 900; margin-bottom: 1rem; }
+.hero-subtitle { font-size: 1.5rem; margin-bottom: 1.5rem; }
+.hero-text { font-size: 1.2rem; margin-bottom: 1rem; }
+
+.email-form { display: flex; gap: 8px; width: 100%; max-width: 600px; justify-content: center; margin-top: 10px;}
+.email-input { flex: 1; padding: 16px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 4px; background: rgba(0, 0, 0, 0.5); color: white; font-size: 1rem; }
+.start-btn { background-color: #e50914; color: white; border: none; border-radius: 4px; padding: 0 24px; font-size: 1.5rem; font-weight: bold; cursor: pointer; }
+
+
+.landing-section {
+  padding: 70px 5%;
+  border-bottom: 8px solid #222; /* 넷플릭스 특유의 두꺼운 구분선 */
+}
+.landing-section h2 { font-size: 1.5rem; margin-bottom: 24px; }
+
+
+.promo-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #1e1b4b, #312e81);
+  padding: 24px 40px;
+  border-radius: 8px;
+}
+.promo-icon { font-size: 3rem; }
+.promo-text h3 { margin: 0 0 8px 0; font-size: 1.2rem; }
+.promo-text p { margin: 0; color: #ccc; }
+.promo-btn { background: rgba(255,255,255,0.1); color: white; border: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; cursor: pointer;}
+.promo-btn:hover { background: rgba(255,255,255,0.2); }
+
+
+.trending-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.trending-card {
+  position: relative;
+  min-width: 200px;
+  height: 280px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trending-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+.trending-number {
+  position: absolute;
+  bottom: -10px;
+  left: -20px;
+  font-size: 8rem;
+  font-weight: 900;
+  color: black;
+  -webkit-text-stroke: 2px white;
+  z-index: 2; 
+}
+
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.reason-card {
+  background: linear-gradient(135deg, #1f1b2e 0%, #000 100%);
+  padding: 24px;
+  border-radius: 16px;
+  min-height: 200px;
+}
+.reason-card h3 { font-size: 1.2rem; margin-bottom: 16px; }
+.reason-card p { color: #aaa; font-size: 0.95rem; line-height: 1.5; }
+
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 40px auto;
+  max-width: 1000px;
+}
+.faq-item { margin-bottom: 8px; }
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: #2d2d2d;
+  color: white;
+  border: none;
+  padding: 24px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.faq-question:hover { background: #414141; }
+.faq-icon { font-size: 2rem; font-weight: 300; }
+.faq-answer {
+  background: #2d2d2d;
+  padding: 24px;
+  font-size: 1.5rem;
+  margin-top: 2px; 
+}
+  
+.bottom-email { text-align: center; margin-top: 40px; }
+.bottom-email p { font-size: 1.2rem; margin-bottom: 16px; }
